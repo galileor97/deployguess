@@ -4,8 +4,8 @@ import io from "socket.io-client";
 import { useLocation, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
 
-// const socket = io("https://guessio-server.rollyroller.com");
-const socket = io("http://localhost:3000");
+const socket = io("https://guessio-server.rollyroller.com");
+// const socket = io("http://localhost:3000");
 
 
 const DashboardPage = () => {
@@ -41,7 +41,7 @@ const DashboardPage = () => {
       if (winnerId) {
         Swal.fire({
           title: 'Game Over!',
-          text: `The winner is ${winnerName}`,
+          text: `A player has guessed the correct number`,
           icon: 'success',
           confirmButtonText: 'OK'
 
@@ -73,12 +73,12 @@ const DashboardPage = () => {
     <div className="p-4">
       <div className="flex justify-between p-10 border border-gray-400/50 rounded-2xl mb-8">
         <div>
-          <h2 className="text-2xl font-bold mb-4">Game in Progress</h2>
-          <p className="text-xl mb-4">Pick your card</p>
+          <h2 className="text-4xl tracking-wider font-bold gradient bg-clip-text text-transparent font-lucky">Game in Progress</h2>
+          <p className="text-lg">Pick your card</p>
         </div>
         <div>
-          <p className="text-xl mb-4">Time Left:</p>
-          <p className="text-xl mb-4">{countdown} seconds</p>
+          <p className="text-xl font-bold  gradient bg-clip-text text-transparent font-lucky tracking-wider">Time Left:</p>
+          <p className="text-lg">{countdown} seconds</p>
         </div>
       </div>
       {isRoomMaster ? (

@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import io from "socket.io-client";
 import Swal from 'sweetalert2';
 
-// const socket = io("https://guessio-server.rollyroller.com");
-const socket = io("http://localhost:3000");
+const socket = io("https://guessio-server.rollyroller.com");
+// const socket = io("http://localhost:3000");
 
 export default function AddPlayerPage() {
   const navigate = useNavigate();
