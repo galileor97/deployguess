@@ -41,7 +41,7 @@ const DashboardPage = () => {
       if (winnerId) {
         Swal.fire({
           title: 'Game Over!',
-          text: `A player has guessed the correct number`,
+          text: `A player has guessed the correct number!`,
           icon: 'success',
           confirmButtonText: 'OK'
 
